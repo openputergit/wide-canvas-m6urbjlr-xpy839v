@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Nodes - Premium Minecraft Hosting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e0e5ec;
+            color: #2d4263;
+        }
+        .neo-shadow {
+            box-shadow: 8px 8px 15px #a3b1c6,
+                       -8px -8px 15px #ffffff;
+        }
+        .neo-shadow-inset {
+            box-shadow: inset 4px 4px 8px #a3b1c6,
+                       inset -4px -4px 8px #ffffff;
+        }
+        .neo-btn {
+            transition: all 0.2s ease;
+        }
+        .neo-btn:active {
+            box-shadow: inset 4px 4px 8px #a3b1c6,
+                       inset -4px -4px 8px #ffffff;
+        }
+        .pricing-card {
+            transition: transform 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2d4263;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#e0e5ec] z-50 neo-shadow">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'%3E%3Cpath fill='%232d4263' d='M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.7L20 9v6l-8 4-8-4V9l8-4.3z'/%3E%3C/svg%3E" alt="RS Nodes Logo" class="h-10 w-10 mr-3">
+                    <span class="text-2xl font-bold">RS Nodes</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#about" class="nav-link">About</a>
+                </div>
+                <button class="md:hidden neo-shadow rounded-lg p-2" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 neo-shadow-inset rounded-lg p-4">
+                <a href="#home" class="block py-2">Home</a>
+                <a href="#services" class="block py-2">Services</a>
+                <a href="#pricing" class="block py-2">Pricing</a>
+                <a href="#about" class="block py-2">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        Premium Minecraft Server Hosting
+                    </h1>
+                    <p class="text-lg mb-8 text-gray-600">
+                        Launch your Minecraft server in seconds with our high-performance hosting solutions.
+                    </p>
+                    <button class="neo-shadow rounded-lg px-8 py-3 font-semibold neo-btn">
+                        Start Hosting Now
+                    </button>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="neo-shadow rounded-2xl p-4">
+                        <img src="https://images.unsplash.com/photo-1587573089734-09cb69c0f2b4" alt="Minecraft Server" class="rounded-xl w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="neo-shadow rounded-xl p-6 text-center">
+                    <i class="bi bi-lightning-charge text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Instant Setup</h3>
+                    <p class="text-gray-600">Get your server running in less than 60 seconds</p>
+                </div>
+                <div class="neo-shadow rounded-xl p-6 text-center">
+                    <i class="bi bi-shield-check text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">DDoS Protection</h3>
+                    <p class="text-gray-600">Enterprise-grade security included free</p>
+                </div>
+                <div class="neo-shadow rounded-xl p-6 text-center">
+                    <i class="bi bi-gear text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Full Control</h3>
+                    <p class="text-gray-600">Easy-to-use control panel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-[#e6ebf2]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Choose Your Plan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="pricing-card neo-shadow rounded-xl p-6 bg-[#e0e5ec]">
+                    <h3 class="text-xl font-bold mb-4">Starter</h3>
+                    <div class="text-3xl font-bold mb-6">$9.99<span class="text-lg">/mo</span></div>
+                    <ul class="mb-8 space-y-3">
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>2GB RAM</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>20 Player Slots</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>24/7 Support</li>
+                    </ul>
+                    <button class="w-full neo-btn rounded-lg py-3 font-semibold">Select Plan</button>
+                </div>
+                <!-- Pro Plan -->
+                <div class="pricing-card neo-shadow rounded-xl p-6 bg-[#e0e5ec] transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-[#2d4263] text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Professional</h3>
+                    <div class="text-3xl font-bold mb-6">$24.99<span class="text-lg">/mo</span></div>
+                    <ul class="mb-8 space-y-3">
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>6GB RAM</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>60 Player Slots</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>Priority Support</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>Mod Support</li>
+                    </ul>
+                    <button class="w-full neo-btn rounded-lg py-3 font-semibold">Select Plan</button>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="pricing-card neo-shadow rounded-xl p-6 bg-[#e0e5ec]">
+                    <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+                    <div class="text-3xl font-bold mb-6">$49.99<span class="text-lg">/mo</span></div>
+                    <ul class="mb-8 space-y-3">
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>12GB RAM</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>Unlimited Players</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>24/7 Premium Support</li>
+                        <li class="flex items-center"><i class="bi bi-check2 mr-2"></i>Custom Modifications</li>
+                    </ul>
+                    <button class="w-full neo-btn rounded-lg py-3 font-semibold">Select Plan</button>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block neo-btn rounded-lg px-8 py-3 font-semibold">
+                    Explore More Plans
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="neo-shadow rounded-xl p-8">
+                <h2 class="text-3xl font-bold text-center mb-8">About RS Nodes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Who We Are</h3>
+                        <p class="text-gray-600 mb-4">
+                            RS Nodes is a leading Minecraft server hosting provider, dedicated to delivering exceptional gaming experiences through cutting-edge technology and outstanding support.
+                        </p>
+                        <p class="text-gray-600">
+                            With years of experience in the industry, we understand what players and server owners need to create thriving Minecraft communities.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Our Promise</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center"><i class="bi bi-check2-circle mr-2"></i>99.9% Uptime Guarantee</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle mr-2"></i>24/7 Technical Support</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle mr-2"></i>Money-Back Guarantee</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle mr-2"></i>Instant Server Deployment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#e6ebf2] py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'%3E%3Cpath fill='%232d4263' d='M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.7L20 9v6l-8 4-8-4V9l8-4.3z'/%3E%3C/svg%3E" alt="RS Nodes Logo" class="h-8 w-8 mr-2">
+                        <span class="text-xl font-bold">RS Nodes</span>
+                    </div>
+                    <p class="text-gray-600">Premium Minecraft Hosting Solutions</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Services</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Pricing</a></li>
+                        <li><a href="#" class="hover:text-gray-900">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Help Center</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Server Status</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="neo-shadow p-2 rounded-lg neo-btn">
+                            <i class="bi bi-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="neo-shadow p-2 rounded-lg neo-btn">
+                            <i class="bi bi-discord text-xl"></i>
+                        </a>
+                        <a href="#" class="neo-shadow p-2 rounded-lg neo-btn">
+                            <i class="bi bi-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-200 text-center text-gray-600">
+                <p>&copy; 2023 RS Nodes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
